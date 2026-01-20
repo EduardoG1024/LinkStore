@@ -1,0 +1,32 @@
+.newContainerDisplay{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    width: 100%;
+    height: fit-content;
+    gap: 10px;
+}
+.imagenElement, .videoElement{
+    width: 100%;
+    height: fit-content;
+    border: none;
+    border-radius: 5px;
+    align-self: center;
+}
+@media (max-width: 500px) {
+    .newContainerDisplay{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        width: 100%;
+        height: fit-content;
+        gap: 10px;
+    }
+    .imagenElement, .videoElement{
+        width: 95%;
+        height: fit-content;
+    }
+    .imagenElement{
+        width: 90%;
+    }
+}

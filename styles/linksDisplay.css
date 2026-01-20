@@ -1,0 +1,78 @@
+#statusConteo{
+    font-family: 'Comic Neue', cursive;
+    color: #9FB0C3;
+}
+.container-local-links-user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    height: fit-content;
+}
+.text-if-not-links{
+    font-family: 'Comic Neue', cursive;
+    color: #9FB0C3;
+}
+.linkBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    height: fit-content;
+    background: #1a232e;
+    border-radius: 5px;
+}
+.linkA{
+    font-family: 'Comic Neue', cursive;
+    color: #9FB0C3;
+    margin: 10px 0 10px 10px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+.container-buttons-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin: 10px 10px 10px 0;
+}
+.linkButton, .linkRemove, .linkDisplay{
+    font-family: 'Comic Neue', cursive;
+    color: #0B0F14;
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background: #3B82F6;
+    cursor: pointer;
+}
+.linkRemove{
+    width: 100px;
+    background: #60A5FA;
+}
+.linkDisplay{
+    width: 60px;
+    background-color: #3bf689;
+}
+#statusLinksLocal{
+    font-family: 'Comic Neue', cursive;
+    color: #9FB0C3;
+}
+.noDataLinks{
+    text-align: center;
+    font-family: 'Comic Neue', cursive;
+    color: #9FB0C3;
+}
+.characterNoData{
+    opacity: .6;
+    width: 200px;
+    height: fit-content;
+}

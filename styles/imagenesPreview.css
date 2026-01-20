@@ -1,0 +1,73 @@
+.videoContainer{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.imagenPreview{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}
+.imagenPreview, .videoPreview{
+    width: fit-content;
+    height: 90%;
+    border-radius: 5px;
+}
+.videoClose{
+    font-family: 'Comic Neue', cursive;
+    color: #0B0F14;
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background: #EF4444;
+    cursor: pointer;
+}
+@media (max-width: 500px) {
+    .videoContainer{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 95%;
+        height: fit-content;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 200;
+    }
+    .imagenPreview{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 200;
+    }
+    .imagenPreview, .videoPreview{
+        width: 95%;
+        height: fit-content;
+        border-radius: 5px;
+    }
+    .videoClose{
+        font-family: 'Comic Neue', cursive;
+        color: #0B0F14;
+        width: 80%;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        background: #EF4444;
+        cursor: pointer;
+    }
+}

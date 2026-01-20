@@ -1,0 +1,49 @@
+.frameHub{
+    position: fixed;
+    width: 600px;
+    height: 350px;
+    border: none;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}
+@media (max-width: 700px) {
+    .frameHub{
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        object-fit: contain;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 200;
+    }
+}
+/**/
+.displayHubFrames{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    height: fit-content;
+    gap: 10px;
+}
+.hubBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    gap: 20px;
+}
+.framedHub{
+    width: 550px;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}

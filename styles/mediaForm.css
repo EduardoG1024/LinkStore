@@ -1,0 +1,68 @@
+@media (max-width: 500px) {
+    form{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px 5px 5px 5px;
+    }
+    .container-link-user{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+        width: fit-content;
+        height: fit-content;
+    }
+    input{
+        color: #9FB0C3;
+        width: 250px;
+        height: 25px;
+        border: #1E293B solid 2px;
+        border-radius: 3px;
+        background: transparent;
+    }
+    input:focus{
+        box-shadow: 0 0 10px #30405a;
+        background: transparent;
+    }
+    .enlace-icon{
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        color: #fff;
+    }
+    .container-link-quit{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        height: fit-content;  
+    }
+    #saveUserLink{
+        font-family: 'Comic Neue', cursive;
+        color: #0B0F14;
+        width: 150px;
+        height: 25px;
+        border: none;
+        border-radius: 3px;
+        background: #3B82F6;
+        cursor: pointer;
+    }
+    #quitUserLink{
+        font-family: 'Comic Neue', cursive;
+        color: #0B0F14;
+        width: 65px;
+        height: 25px;
+        border: none;
+        border-radius: 3px;
+        background: #EF4444;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,64 @@
+@media (max-width: 700px) {
+    .container-local-links-user{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        height: auto;
+    }
+    .linkBox{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 90%;
+        height: fit-content;
+        background: #1a232e;
+        border-radius: 5px;
+    }
+    .container-buttons-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        height: fit-content;
+        margin: 10px 0 10px 0;
+    }
+    .linkA{
+        font-family: 'Comic Neue', cursive;
+        color: #9FB0C3;
+        margin: 10px 0 10px 10px;
+        width: 100%;
+    }
+    .linkButton, .linkRemove, .linkDisplay{
+        font-family: 'Comic Neue', cursive;
+        color: #0B0F14;
+        width: 80px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        background: #3B82F6;
+        cursor: pointer;
+    }
+    .linkRemove{
+        background: #60A5FA;
+    }
+    .linkDisplay{
+        background-color: #3bf689;
+    }
+    .noDataLinks{
+        text-align: center;
+        font-family: 'Comic Neue', cursive;
+        color: #9FB0C3;
+    }
+    .characterNoData{
+        opacity: .6;
+        width: 250px;
+        height: fit-content;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/form.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/linksDisplay.css">
+    <link rel="stylesheet" href="/styles/imagenesPreview.css">
+    <link rel="stylesheet" href="/styles/newLinksFiltered.css">
+    <link rel="stylesheet" href="/styles/linkHubPreview.css">
+    <link rel="stylesheet" href="/styles/mediaNavbar.css">
+    <link rel="stylesheet" href="/styles/mediaForm.css">
+    <link rel="stylesheet" href="/styles/mediaLinksDisplay.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.0.0/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="/logic/navbarButtons.js" defer></script>
+    <script src="/logic/guardarLinksLocal.js" defer></script>
+    <script src="/logic/mostrarLinks.js" type="module"></script>
+    <script src="/logic/footerCopyRight.js" defer></script>
+    <script src="/logic/conteoLinks.js" defer></script>
+    <script src="/logic/imprimirLinks.js" defer></script>
+    <script src="/logic/cambiarVistaLinks.js" type="module"></script>
+</head>
+<!--LinkStorage-->
+<body>
+    <nav>
+        <h1>LinkStore</h1>
+        <div class="container-icons">
+            <button id="PHBtn">PH</button>
+            <button id="añadirLink">Añadir Link</button>
+            <button id="extraBtn">Link View</button>
+        </div>
+    </nav>
+    <!---->
+    <p class="consejo-texto"><strong>Para mas Informacion haz Click en "LinkStore"</strong></p>
+    <!---->
+    <h2 id="statusLink"></h2>
+    <!---->
+    <form>
+        <label for="userLink">Link: </label>
+        <div class="container-link-user">
+            <input type="text" name="userLink" id="userLink" placeholder="Ingresa un link..." required>
+            <img src="/assets/icons/enlace-icon-02.png" alt="enlace" class="enlace-icon">
+        </div>
+        <div class="container-link-quit">
+            <button id="saveUserLink">Guardar Link</button>
+            <button id="quitUserLink">Cancelar</button>
+        </div>
+    </form>
+    <!---->
+    <main>
+        <!---->
+        <hr>
+        <img src="/assets/images/frieren-04.png" alt="frieren" class="top-img-character">
+        <hr>
+        <h2 id="statusLinksLocal"></h2>
+        <p id="statusConteo"></p>
+        <div class="container-local-links-user"></div>
+        <!---->
+    </main>
+    <!---->
+    <footer>
+        <p id="footerCopyRight"></p>
+        <div class="container-extra-buttons">
+            <button id="deleteEveryLinkLocal">Borrar Todo</button>
+            <button id="DownloadEveryLinkLocal">Descargar Todo</button>
+        </div>
+    </footer>
+</body>
+</html>
