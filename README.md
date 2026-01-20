@@ -17,5 +17,5 @@
 - This functions allows the user add a new link to the LocalStorage
 
 ```bash
-    console.log('holamundo');
+    localStorage.getItem('LinksGuardados');
 ```
