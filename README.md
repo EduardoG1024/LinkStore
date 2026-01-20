@@ -6,7 +6,7 @@
     - LinkStore wants to give privaciy to you so all the links wont be storage in a server.
 
 ## LINKSTORE DESIGN
-![Alt image](./designs/main-01.jpg)
+![Alt image](./designs/Figma%20Design%2001.png)
 
 
 # LINKSTORE - TECHNICAL
