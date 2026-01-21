@@ -1,11 +1,18 @@
 // HUB FRAMES FILTERED FUNCTION
 
-export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser, statusNewConteo) {
+export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser, statusNewConteo, pagePlus) {
     containerLocalLinksUser.innerHTML = '';
     containerLocalLinksUser.className = 'displayHubFrames';
     let framesHubFiltered = onlyImagesVideos.filter(H => H.includes('pornhub'));
     statusNewConteo.textContent = `Elementos disponibles: ${framesHubFiltered.length}`;
-    framesHubFiltered.forEach(HubUrl => {
+    // PAGINACION
+    let itemsForPage = 10;
+    let page = pagePlus || 0;
+    let beginig = page * itemsForPage;
+    let end = beginig + itemsForPage;
+    let linksPagination = framesHubFiltered.slice(beginig, end);
+    // CONFIGURACION PARA CADA LINK
+    linksPagination.forEach(HubUrl => {
         let newFrames = new URL(HubUrl);
         let canvaHub = `https://${newFrames.hostname}/embed/${newFrames.searchParams.get('viewkey')}`;
         //console.log(canvaHub);
@@ -13,5 +20,17 @@ export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser
         hubBox.className = 'hubBox';
         hubBox.innerHTML = `<iframe src="${canvaHub}" allowFullScreen class="framedHub"></iframe>`;
         containerLocalLinksUser.appendChild(hubBox);
+    });
+    // BOTON DE PAGINACION
+    // THIS FUNCTION WORKS BECAUSE I WAS LISTENING "JMSN - LOVE ME [TIKTOK VERSION]"
+    const nextPage = document.createElement('button');
+    nextPage.className = 'nextPage';
+    nextPage.textContent = 'Siguiente';
+    containerLocalLinksUser.appendChild(nextPage);
+    nextPage.addEventListener('click', () => {
+        let pagePlus = page + 1;
+        containerLocalLinksUser.innerHTML = '';
+        CreateFrameHub(onlyImagesVideos,containerLocalLinksUser, statusNewConteo, pagePlus);
+        return page;
     });
 }
