@@ -6,7 +6,7 @@ export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser
     let framesHubFiltered = onlyImagesVideos.filter(H => H.includes('pornhub'));
     statusNewConteo.textContent = `Elementos disponibles: ${framesHubFiltered.length}`;
     // PAGINACION
-    let itemsForPage = 10;
+    let itemsForPage = 9;
     let page = pagePlus || 0;
     let beginig = page * itemsForPage;
     let end = beginig + itemsForPage;
