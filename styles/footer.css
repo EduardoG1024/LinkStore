@@ -27,7 +27,7 @@ footer{
     border-radius: 3px;
     background: #EF4444;
 }
-#DownloadEveryLinkLocal{
+#CopyEveryLinkLocal{
     font-family: 'Comic Neue', cursive;
     color: #0B0F14;
     width: 200px;
@@ -35,6 +35,18 @@ footer{
     border: none;
     border-radius: 3px;
     background-color: #973284;
+}
+.container-help-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+}
+.container-help-links a{
+    color: #9FB0C3;
+    font-family: 'Comic Neue', cursive;
 }
 @media (max-width: 500px) {
     footer{

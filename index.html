@@ -24,9 +24,11 @@
     <script src="/logic/guardarLinksLocal.js" defer></script>
     <script src="/logic/mostrarLinks.js" type="module"></script>
     <script src="/logic/footerCopyRight.js" defer></script>
+    <script src="/logic/footerButtons.js" defer></script>
     <script src="/logic/conteoLinks.js" defer></script>
     <script src="/logic/imprimirLinks.js" defer></script>
     <script src="/logic/cambiarVistaLinks.js" type="module"></script>
+    <script src="/logic/espacioDisponibleLS.js" defer></script>
 </head>
 <!--LinkStorage-->
 <body>
@@ -42,7 +44,7 @@
     <p class="consejo-texto"><strong>Para mas Informacion haz Click en "LinkStore"</strong></p>
     <!---->
     <h2 id="statusLink"></h2>
-    <!---->
+    <!--FORMULARIO => AÑADIR LINKS-->
     <form>
         <label for="userLink">Link: </label>
         <div class="container-link-user">
@@ -57,20 +59,29 @@
     <!---->
     <main>
         <!---->
+        <!--CAMBIAR IMAGEN => ESPACIO UTILIZADO-->
         <hr>
         <img src="/assets/images/frieren-04.png" alt="frieren" class="top-img-character">
         <hr>
         <h2 id="statusLinksLocal"></h2>
         <p id="statusConteo"></p>
+        <!--CONTENEDOR DE LINKS / GALERIA / VIDEOS-->
         <div class="container-local-links-user"></div>
         <!---->
     </main>
-    <!---->
+    <!--FOOTER-->
     <footer>
         <p id="footerCopyRight"></p>
+        <div class="container-help-links">
+            <a href="/public.html">Ayuda - </a>
+            <a href="https://www.instagram.com/cupid241024/">Instagram - </a>
+            <a href="/public.html">Info - </a>
+            <a href="https://www.instagram.com/cupid241024/">Contacto</a>
+        </div>
+        <!--CONTENEDOR DE FUNCIONES EXTRAS-->
         <div class="container-extra-buttons">
             <button id="deleteEveryLinkLocal">Borrar Todo</button>
-            <button id="DownloadEveryLinkLocal">Descargar Todo</button>
+            <button id="CopyEveryLinkLocal">Copiar Todo</button>
         </div>
     </footer>
 </body>

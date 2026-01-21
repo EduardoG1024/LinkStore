@@ -42,12 +42,14 @@ export default function DisplayLinkImage(linkA) {
         let hostHub = newHub.hostname;
         let hub = newHub.searchParams.get('viewkey');
         const linkHub = `https://${hostHub}/embed/${hub}`;
-        const frameHub = document.createElement('iframe');
-        frameHub.className = 'frameHub';
-        frameHub.src = linkHub;
-        frameHub.muted = true;
-        frameHub.allowFullscreen = true;
-        containerLocalLinksUser.appendChild(frameHub);
+        const containerHub = document.createElement('div');
+        containerHub.className = 'containerHub';
+        containerHub.innerHTML = `<iframe src="${linkHub}" class="frameHub" allowFullScreen muted></iframe><br>
+                                  <button class="frameClose">Cerrar</button>`;
+        containerLocalLinksUser.appendChild(containerHub);
+        document.querySelector('.frameClose').addEventListener('click', () => {
+            containerHub.remove();
+        });
     }else {
         alert('No es Posible Previsualizar Este Archivo');
     }

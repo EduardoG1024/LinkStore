@@ -7,7 +7,6 @@ export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser
     statusNewConteo.textContent = `Elementos disponibles: ${framesHubFiltered.length}`;
     framesHubFiltered.forEach(HubUrl => {
         let newFrames = new URL(HubUrl);
-        console.log(newFrames);
         let canvaHub = `https://${newFrames.hostname}/embed/${newFrames.searchParams.get('viewkey')}`;
         //console.log(canvaHub);
         const hubBox = document.createElement('div');
