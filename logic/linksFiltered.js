@@ -24,13 +24,23 @@ export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser
     // BOTON DE PAGINACION
     // THIS FUNCTION WORKS BECAUSE I WAS LISTENING "JMSN - LOVE ME [TIKTOK VERSION]"
     const nextPage = document.createElement('button');
+    const pastPage = document.createElement('button');
     nextPage.className = 'nextPage';
+    pastPage.className = 'pastPage';
     nextPage.textContent = 'Siguiente';
+    pastPage.textContent = 'Anterior';
+    containerLocalLinksUser.appendChild(pastPage);
     containerLocalLinksUser.appendChild(nextPage);
     nextPage.addEventListener('click', () => {
         let pagePlus = page + 1;
         containerLocalLinksUser.innerHTML = '';
         CreateFrameHub(onlyImagesVideos,containerLocalLinksUser, statusNewConteo, pagePlus);
-        return page;
+        return pagePlus;
     });
+    pastPage.addEventListener('click', () => {
+        let pageLess = page - 1;
+        containerLocalLinksUser.innerHTML = '';
+        CreateFrameHub(onlyImagesVideos, containerLocalLinksUser, statusNewConteo, pageLess);
+        return pageLess;
+    })
 }
