@@ -1,6 +1,7 @@
 import { GoToLinkSite } from "./displayImagesLink.js";
 import { RemoveLink } from "./displayImagesLink.js";
 import DisplayLinkImage from "./displayImagesLink.js";
+import getUsedStorage from "./espacioDisponibleLS.js";
 
 const containerLocalLinksUser = document.querySelector('.container-local-links-user');
 const statusLinksLocal = document.getElementById('statusLinksLocal');
@@ -53,6 +54,7 @@ function MostrarLinks() {
         });
     }
 }
+MostrarLinks();
 
 function BannerNoLinks() {
     const noDataLinks = document.createElement('p');
@@ -66,5 +68,7 @@ function BannerNoLinks() {
     containerLocalLinksUser.appendChild(corte);
     containerLocalLinksUser.appendChild(characterNoData);
 }
-MostrarLinks();
 BannerNoLinks();
+// STORAGE USED
+getUsedStorage();
+// 
