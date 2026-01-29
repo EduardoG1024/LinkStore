@@ -1,6 +1,6 @@
 // HUB FRAMES FILTERED FUNCTION
 
-export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser, statusNewConteo, pagePlus) {
+export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser, statusNewConteo, pagePlus, pageLess) {
     containerLocalLinksUser.innerHTML = '';
     containerLocalLinksUser.className = 'displayHubFrames';
     let framesHubFiltered = onlyImagesVideos.filter(H => H.includes('pornhub'));
@@ -23,14 +23,17 @@ export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser
     });
     // BOTON DE PAGINACION
     // THIS FUNCTION WORKS BECAUSE I WAS LISTENING "JMSN - LOVE ME [TIKTOK VERSION]"
+    const containerNextPast = document.createElement('div');
     const nextPage = document.createElement('button');
     const pastPage = document.createElement('button');
+    containerNextPast.className = 'containerNextPast';
     nextPage.className = 'nextPage';
     pastPage.className = 'pastPage';
-    nextPage.textContent = 'Siguiente';
-    pastPage.textContent = 'Anterior';
-    containerLocalLinksUser.appendChild(pastPage);
-    containerLocalLinksUser.appendChild(nextPage);
+    nextPage.textContent = '>';
+    pastPage.textContent = '<';
+    containerNextPast.appendChild(pastPage);
+    containerNextPast.appendChild(nextPage);
+    containerLocalLinksUser.appendChild(containerNextPast);
     nextPage.addEventListener('click', () => {
         let pagePlus = page + 1;
         containerLocalLinksUser.innerHTML = '';
@@ -42,5 +45,5 @@ export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser
         containerLocalLinksUser.innerHTML = '';
         CreateFrameHub(onlyImagesVideos, containerLocalLinksUser, statusNewConteo, pageLess);
         return pageLess;
-    })
+    });
 }

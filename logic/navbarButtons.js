@@ -8,5 +8,5 @@ saveLinkBtn.addEventListener('click', () => {
 const quitUserLink = document.getElementById('quitUserLink');
 
 quitUserLink.addEventListener('click', () => {
-    window.location.reload();
+    formulario.style.display = 'none';
 });

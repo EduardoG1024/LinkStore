@@ -55,11 +55,6 @@ export default function DisplayLinkImage(linkA) {
     }
 }
 
-// REDIRECCION DE LINK A SITIO
-export function GoToLinkSite(linkA) {
-    window.open(linkA);
-}
-
 // ELIMINACION DE LINKS
 export function RemoveLink(linkA, linksOfUser, statusLinksLocal) {
     let getRemovedLink = linkA;

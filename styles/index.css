@@ -44,7 +44,7 @@ hr{
 .top-img-character{
     width: 200px;
     height: fit-content;
-    opacity: .6;
+    opacity: 0;
     animation-name: frieren;
     animation-timing-function: ease-in-out;
     animation-duration: 1.5s;

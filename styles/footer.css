@@ -6,7 +6,7 @@ footer{
     width: 80%;
     height: fit-content;
     gap: 10px;
-    margin: 10px 0 10px 0;
+    margin: 20px 0 10px 0;
 }
 .container-extra-buttons{
     display: flex;
@@ -18,23 +18,23 @@ footer{
     gap: 10px;
     margin: 10px 0 10px 0;
 }
-#deleteEveryLinkLocal{
+#deleteEveryLinkLocal, #CopyEveryLinkLocal, #SpaceLinkLocal{
     font-family: 'Comic Neue', cursive;
     color: #0B0F14;
     width: 150px;
     height: 30px;
     border: none;
     border-radius: 3px;
+    cursor: pointer;
+}
+#deleteEveryLinkLocal{
     background: #EF4444;
 }
 #CopyEveryLinkLocal{
-    font-family: 'Comic Neue', cursive;
-    color: #0B0F14;
-    width: 200px;
-    height: 30px;
-    border: none;
-    border-radius: 3px;
-    background-color: #973284;
+    background: #3B82F6;
+}
+#SpaceLinkLocal{
+    background: #60A5FA;
 }
 .container-help-links{
     display: flex;

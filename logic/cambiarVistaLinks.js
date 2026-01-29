@@ -13,6 +13,7 @@ hubClick.addEventListener('click', () => {
 LinkView.addEventListener('click', () => {
     // LIMPIEZA
     containerLocalLinksUser.innerHTML = '';
+    containerLocalLinksUser.className = 'newContainerDisplay';
     // DATOS
     let onlyImagesVideos = JSON.parse(localStorage.getItem('LinksGuardados'));
     // FILTRAR IMAGENES
@@ -25,21 +26,8 @@ LinkView.addEventListener('click', () => {
         imagenElement.loading = 'lazy';
         containerLocalLinksUser.appendChild(imagenElement);
     });
-    // FILTRAR VIDEOS
-    let videoLinksFiltered = onlyImagesVideos.filter(V => V.endsWith('.mp4'));
-    let videosConteo = videoLinksFiltered.length;
-    videoLinksFiltered.forEach(video => {
-        const videoElement = document.createElement('video');
-        videoElement.className = 'videoElement';
-        containerLocalLinksUser.className = 'newContainerDisplay';
-        videoElement.src = video;
-        videoElement.controls = true;
-        videoElement.muted = true;
-        videoElement.pause();
-        containerLocalLinksUser.appendChild(videoElement);
-    });
     // CONTEO DE NUEVOS ELEMENTOS
-    let conteoLinksNuevos = imagesConteo + videosConteo;
+    let conteoLinksNuevos = imagesConteo;
     statusNewConteo.textContent = `Elementos Disponibles: ${conteoLinksNuevos}`;
 
 });

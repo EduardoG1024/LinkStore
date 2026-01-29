@@ -44,35 +44,24 @@
     height: fit-content;
     margin: 10px 10px 10px 0;
 }
-.linkButton, .linkRemove, .linkDisplay{
+.linkRemove, .linkDisplay{
     font-family: 'Comic Neue', cursive;
     color: #0B0F14;
     width: 150px;
     height: 30px;
     border: none;
     border-radius: 3px;
-    background: #3B82F6;
     cursor: pointer;
 }
 .linkRemove{
-    width: 100px;
-    background: #60A5FA;
+    width: 80px;
+    background: #EF4444;
 }
 .linkDisplay{
-    width: 60px;
-    background-color: #3bf689;
+    width: 150px;
+    background-color: #60A5FA;
 }
 #statusLinksLocal{
     font-family: 'Comic Neue', cursive;
     color: #9FB0C3;
-}
-.noDataLinks{
-    text-align: center;
-    font-family: 'Comic Neue', cursive;
-    color: #9FB0C3;
-}
-.characterNoData{
-    opacity: .6;
-    width: 200px;
-    height: fit-content;
 }

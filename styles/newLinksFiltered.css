@@ -6,7 +6,7 @@
     height: fit-content;
     gap: 10px;
 }
-.imagenElement, .videoElement{
+.imagenElement{
     width: 100%;
     height: fit-content;
     border: none;
@@ -22,11 +22,8 @@
         height: fit-content;
         gap: 10px;
     }
-    .imagenElement, .videoElement{
+    .imagenElement{
         width: 95%;
         height: fit-content;
-    }
-    .imagenElement{
-        width: 90%;
     }
 }
