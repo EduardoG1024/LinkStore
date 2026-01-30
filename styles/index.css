@@ -42,9 +42,10 @@ hr{
     width: 80%;
 }
 .top-img-character{
-    width: 200px;
+    max-width: 400px;
+    width: 100%;
     height: fit-content;
-    opacity: 0;
+    opacity: .6;
     animation-name: frieren;
     animation-timing-function: ease-in-out;
     animation-duration: 1.5s;
