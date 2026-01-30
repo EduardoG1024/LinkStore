@@ -12,30 +12,38 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        flex-direction: row;
+        flex-direction: column;
         gap: 10px;
-        width: fit-content;
+        width: 80%;
+        height: fit-content;
+        margin: 10px 0 0 0;
+    }
+    .container-icons-first{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
         height: fit-content;
     }
-    #añadirLink, #extraBtn, #PHBtn{
+    #añadirLink, #extraBtn, #PHBtn, #randomBtn{
         font-family: 'Comic Neue', cursive;
         font-weight: bold;
-        width: 100px;
+        width: 100%;
         height: 35px;
         color: #0B0F14;
         border: none;
         border-radius: 5px;
-        background: #3B82F6;
         cursor: pointer;
+    }
+    #randomBtn{
+        background-color: #60A5FA;
     }
     #extraBtn{
         color: #9FB0C3;
-        width: 65px;
         background: #0B0F14;
         border: #3B82F6 solid 2px;
     }
     #PHBtn{
-        width: 65px;
         background: #3bf689;
     }
 }

@@ -13,16 +13,15 @@ nav{
     justify-content: space-evenly;
     flex-direction: column;
     gap: 10px;
-    width: fit-content;
+    max-width: 350px;
+    width: 100%;
     height: fit-content;
 }
 .container-icons-first{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
 }
 #añadirLink, #extraBtn, #PHBtn, #randomBtn{
@@ -37,16 +36,13 @@ nav{
     cursor: pointer;
 }
 #randomBtn{
-    width: 100px;
     background-color: #60A5FA;
 }
 #extraBtn{
     color: #9FB0C3;
-    width: 100px;
     background: #0B0F14;
     border: #3B82F6 solid 2px;
 }
 #PHBtn{
-    width: 80px;
     background: #3bf689;
 }

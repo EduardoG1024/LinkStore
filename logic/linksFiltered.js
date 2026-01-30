@@ -37,12 +37,14 @@ export default function CreateFrameHub(onlyImagesVideos, containerLocalLinksUser
     nextPage.addEventListener('click', () => {
         let pagePlus = page + 1;
         containerLocalLinksUser.innerHTML = '';
+        window.location.href = '#';
         CreateFrameHub(onlyImagesVideos,containerLocalLinksUser, statusNewConteo, pagePlus);
         return pagePlus;
     });
     pastPage.addEventListener('click', () => {
         let pageLess = page - 1;
         containerLocalLinksUser.innerHTML = '';
+        window.location.href = '#';
         CreateFrameHub(onlyImagesVideos, containerLocalLinksUser, statusNewConteo, pageLess);
         return pageLess;
     });
