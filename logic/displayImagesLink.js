@@ -50,7 +50,20 @@ export default function DisplayLinkImage(linkA) {
         document.querySelector('.frameClose').addEventListener('click', () => {
             containerHub.remove();
         });
-    }else {
+    } else if (linkA.includes('youtube')) {
+        let newHub = new URL (linkA);
+        let hostHub = newHub.hostname;
+        let hub = newHub.searchParams.get('v');
+        const linkHub = `https://${hostHub}/embed/${hub}`;
+        const containerHub = document.createElement('div');
+        containerHub.className = 'containerHub';
+        containerHub.innerHTML = `<iframe src="${linkHub}" class="frameHub" allowFullScreen muted></iframe><br>
+                                  <button class="frameClose">Cerrar</button>`;
+        containerLocalLinksUser.appendChild(containerHub);
+        document.querySelector('.frameClose').addEventListener('click', () => {
+            containerHub.remove();
+        });
+    } else {
         alert('No es Posible Previsualizar Este Archivo');
     }
 }
