@@ -1,0 +1,33 @@
+.randomContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    height: fit-content;
+    gap: 10px;
+}
+.randomFrame{
+    width: 100%;
+    height: 340px;
+    border: none;
+    border-radius: 5px;
+}
+@media (max-width: 700px) {
+    .randomContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        gap: 10px;
+    }
+    .randomFrame{
+        width: 100%;
+        height: 230px;
+        border: none;
+        border-radius: 5px;
+    }
+}

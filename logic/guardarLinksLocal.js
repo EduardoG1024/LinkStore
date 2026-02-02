@@ -7,8 +7,8 @@ const statusLink = document.getElementById('statusLink');
 function GuardarLinksLocal() {
     let userLink = document.getElementById('userLink').value.trim();
     // MANEJO DE ERRORES
-    if (userLink) {
-        if (!links.includes(userLink)) {
+    if (userLink && userLink.includes('http')) {
+        if (!links.includes(userLink) ) {
             links.unshift(userLink);
             localStorage.setItem('LinksGuardados', JSON.stringify(links));
             statusLink.textContent = 'Link Guardado Exitosamente';
@@ -25,4 +25,4 @@ function GuardarLinksLocal() {
 saveUserLink.addEventListener('click', () => {
     event.preventDefault();
     GuardarLinksLocal();
-})
+});
