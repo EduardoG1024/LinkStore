@@ -53,7 +53,6 @@ function MostrarLinks() {
     }
 }
 MostrarLinks();
-console.log(linksOfUser)
 // STORAGE USED
 SpaceLinkLocal.addEventListener('click', () => {
     getUsedStorage();
