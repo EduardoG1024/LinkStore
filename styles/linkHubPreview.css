@@ -29,15 +29,35 @@
     cursor: pointer;
 }
 @media (max-width: 700px) {
-    .frameHub{
+    .containerHub{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         position: fixed;
-        width: 100%;
+        width: 95%;
         height: fit-content;
-        object-fit: contain;
+        border: none;
+        border-radius: 10px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 200;
+    }
+    .frameHub{
+        width: 100%;
+        height: fit-content;
+        object-fit: contain;
+        border-radius: 5px;
+        border: none;
+    }
+    .frameClose{
+        width: 80%;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        background: #EF4444;
+        cursor: pointer;
     }
 }
 /*BUTTON PH CLICKED*/

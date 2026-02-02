@@ -29,6 +29,7 @@
     <script src="/logic/conteoLinks.js" defer></script>
     <script src="/logic/imprimirLinks.js" defer></script>
     <script src="/logic/cambiarVistaLinks.js" type="module"></script>
+    <script src="/logic/linksInstagram.js" defer></script>
 </head>
 <!--LinkStorage-->
 <body>
@@ -37,11 +38,12 @@
         <h1>LinkStore</h1>
         <div class="container-icons">
             <div class="container-icons-first">
-                <button id="PHBtn">Link Dash</button>
-                <button id="randomBtn">Random</button>
-                <button id="extraBtn">Link View</button>
+                <button id="PHBtn">Video Link</button>
+                <button id="instaBtn">Insta Link</button>
+                <button id="extraBtn">Image Link</button>
             </div>
             <button id="añadirLink">Añadir Link</button>
+            <button id="randomBtn">Random</button>
         </div>
     </nav>
     <!---->
@@ -70,6 +72,7 @@
         <p id="statusConteo"></p>
         <!--CONTENEDOR DE LINKS / GALERIA / VIDEOS-->
         <div class="container-local-links-user"></div>
+        <div class="container-local-links-instagram"></div>
         <!---->
     </main>
     <!--FOOTER-->
@@ -88,5 +91,6 @@
             <button id="SpaceLinkLocal">Espacio</button>
         </div>
     </footer>
+    <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
