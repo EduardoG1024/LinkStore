@@ -71,7 +71,9 @@ export default function DisplayLinkImage(linkA) {
 // ELIMINACION DE LINKS
 export function RemoveLink(linkA, linksOfUser, statusLinksLocal) {
     let getRemovedLink = linkA;
+    console.log(getRemovedLink);
     let newDeletedLinks = linksOfUser.filter(L => L !== getRemovedLink);
+    console.log(newDeletedLinks);
     localStorage.setItem('LinksGuardados', JSON.stringify(newDeletedLinks));
     statusLinksLocal.textContent = 'Link Eliminado Recarga la Pagina';
 }

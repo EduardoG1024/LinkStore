@@ -16,7 +16,7 @@ let linksOfUser = JSON.parse(localStorage.getItem('LinksGuardados'));
 
 function MostrarLinks() {
     if (linksOfUser) {
-        linksOfUser.map(link => {
+        linksOfUser.forEach(link => {
             // ELEMENTOS
             const linkBox = document.createElement('div');
             const linkA  = document.createElement('a');
@@ -53,7 +53,7 @@ function MostrarLinks() {
     }
 }
 MostrarLinks();
-
+console.log(linksOfUser)
 // STORAGE USED
 SpaceLinkLocal.addEventListener('click', () => {
     getUsedStorage();
